@@ -26,12 +26,13 @@ kotlin {
 dependencies {
     api(projects.core.common)
     api(projects.i18n)
+    implementation(projects.icons.materialSymbols)
 
     // Compose
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.materialIcons)
+    api(libs.androidx.compose.material3NavSuite)
     implementation(libs.androidx.compose.animation)
     implementation(libs.androidx.compose.animationGraphics)
     debugImplementation(libs.androidx.compose.uiTooling)
@@ -40,5 +41,4 @@ dependencies {
 
     implementation(libs.androidx.paging.runtime)
     implementation(libs.androidx.paging.compose)
-    implementation(libs.kotlinx.collections.immutable)
 }
